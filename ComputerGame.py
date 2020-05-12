@@ -1,9 +1,9 @@
 #定义游戏类
 class Game:
     #初始化
-    def __init__(self):
-        self.hp = 1000
-        self.power = 200
+    def __init__(self,hp = 1000,power = 200):
+        self.hp = hp
+        self.power = power
 
     #定义fight方法
     def fight(self,enemy_hp,enemy_power):
