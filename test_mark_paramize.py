@@ -26,8 +26,12 @@ def login_r(request):
     return user
 
 # indirect=True 可以把传过来的参数当函数使用
-@pytest.mark.parametrize("login_r", test_user_data, indirect=True)
+@pytest.mark.parametrize("login_r", test_user_data)
 def test_login(login_r):
     a = login_r
     print(f"测试用例中login的返回值；{a}")
     assert a != ""
+
+
+if __name__ == '__main__':
+    pytest.main()
