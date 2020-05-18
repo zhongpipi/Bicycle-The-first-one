@@ -14,3 +14,12 @@ def pack(*c):
 
 student = {'score': 1.0, 'id': 2, 'name': 'xiaoxiao'}
 pack(*student)
+
+def func(a,b,c):
+    print(a,b,c)
+
+func(*[1,2,3])
+func(*(1,2,3))
+func(*"abc")
+func(*{'a':1,'b':2,'c':3})
+func(**{'a':1,'b':2,'c':3})
